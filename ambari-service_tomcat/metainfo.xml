@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<metainfo>
+    <schemaVersion>2.0</schemaVersion>
+    <services>
+        <service>
+        	<!-- Internal name for service (must be unique) -->
+            <name>TOMCAT</name>
+            <!-- display name in Ambari UI -->
+            <displayName>TOMCAT</displayName>
+            <!-- Description of service - will be displayed when user clicks add service -->
+            <comment>Apache Tomcat™ is an open source software implementation of the Java Servlet, JavaServer Pages, Java Expression Language and Java WebSocket technologies</comment>
+            <!-- Version of component-->
+            <version>7.0.106</version>
+            <components>
+            	<!-- In this case, there is only one master component -->
+                <component>
+                  <name>TOMCAT</name>
+                  <displayName>Tomcat</displayName>
+                  <category>MASTER</category>
+                  <!-- how many of these components are allowed in a cluster -->
+                  <cardinality>1</cardinality>
+                  <!-- reference to (and details of) what script is to be used to install/stop/start/config the service -->
+                  <commandScript>
+                    <script>scripts/master.py</script>
+                    <scriptType>PYTHON</scriptType>
+                    <timeout>10000</timeout>
+                  </commandScript>
+                </component>
+            </components>            
+            <!-- names for config files (under configuration dir) -->      	    
+            <restartRequiredAfterChange>true</restartRequiredAfterChange>
+        </service>
+    </services>
+</metainfo>

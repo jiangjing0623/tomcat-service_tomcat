@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+
+<configuration>
+
+  <!-- service log file -->
+	<property>
+		<name>tomcat.install_dir</name>
+		<value>/opt</value>
+		<description>Local dir where to install component.</description>
+	</property>
+
+	<property>
+		<name>tomcat.port</name>
+		<value>8090</value>
+		<description>Port tomcat runs on</description>
+	</property>
+
+  	<property>
+    		<name>tomcat.log</name>
+    		<value>/var/log/tomcat/tomcat.log</value>
+    		<description>Log file for tomcat service commands used by amabari.</description>
+  	</property> 
+	<property>
+		<name>tomcat_pid_dir</name>
+		<value>/var/run/tomcat</value>
+		<description>Dir containing process ID file</description>
+	</property>
+	<!--
+	<property>
+		<name>tomcat.webapp.address</name>
+		<value>localhost:8090</value>
+	</property>
+	-->
+	<property>
+		<name>tomcat_log_dir</name>
+		<value>/var/log/tomcat</value>
+		<description>Tomcat Log dir</description>
+	</property>
+	
+<!--jdk位置，需要按照主机的实际环境修改-->
+	<property>
+		<name>jdk_dir</name>
+		<value>/usr/jdk64/jdk8u191-b12/</value>
+		<description>Dir containing directories eg： /bin...</description>
+	</property>
+
+	<property>
+		<name>jdk_bin_dir</name>
+		<value>/usr/jdk64/jdk8u191-b12/bin</value>
+		<description>Dir java/bin</description>
+	</property>
+	<property>
+		<name>jre_dir</name>
+		<value>/usr/jdk64/jdk8u191-b12/jre</value>
+		<description>Dir jre</description>
+	</property>
+	
+</configuration>
